@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-creme">
     <div class="container">
       <a class="navbar-brand text-maro fw-bold" href="#">Florescence</a>
@@ -20,12 +21,6 @@
             <a class="nav-link active" href="#">Acasă</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about-us">Despre Noi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Servicii</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#products">Produse</a>
           </li>
           <li class="nav-item">
@@ -36,6 +31,7 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero-section text-center text-white py-5">
     <div class="container">
       <h1 class="display-4">Bine ați venit la Florescence</h1>
@@ -44,9 +40,34 @@
     </div>
   </header>
 
+  <!-- Carusel de imagini -->
+  <div id="carouselExample" class="carousel slide mt-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/carusel1_landscape.jpg" class="d-block w-100 carousel-image" alt="Imagine Carusel 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/carusel2_landscape.jpg" class="d-block w-100 carousel-image" alt="Imagine Carusel 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/carusel3_landscape.jpg" class="d-block w-100 carousel-image" alt="Imagine Carusel 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Secțiunea Produse -->
   <section id="products" class="container my-5">
     <h2 class="text-center text-maro mb-4">Produsele Noastre</h2>
     <div class="row">
+      <!-- Buchet cu Trandafiri -->
       <div class="col-md-4">
         <div class="card shadow-sm hover-shadow">
           <img src="images/buchet1_cu_trandafiri.jpg" class="card-img-top product-image" alt="Buchet cu Trandafiri">
@@ -57,6 +78,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Buchet cu Lalele -->
       <div class="col-md-4">
         <div class="card shadow-sm hover-shadow">
           <img src="images/buchet2_lalele.jpg" class="card-img-top product-image" alt="Buchet cu Lalele">
@@ -67,6 +90,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Buchet cu Bujori -->
       <div class="col-md-4">
         <div class="card shadow-sm hover-shadow">
           <img src="images/buchet3_bujori.jpg" class="card-img-top product-image" alt="Buchet cu Bujori">
@@ -78,40 +103,9 @@
         </div>
       </div>
     </div>
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <div class="card shadow-sm hover-shadow">
-          <img src="images/buchet4_gerbera.jpg" class="card-img-top product-image" alt="Buchet cu Gerbera">
-          <div class="card-body text-center">
-            <h5 class="card-title text-maro">Buchet cu Gerbera</h5>
-            <p class="card-text">Un buchet colorat, perfect pentru a aduce bucurie.</p>
-            <button class="btn btn-verde add-to-cart" data-product="Buchet cu Gerbera">Adaugă în Coș</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm hover-shadow">
-          <img src="images/buchet5_crini.jpg" class="card-img-top product-image" alt="Buchet cu Crini">
-          <div class="card-body text-center">
-            <h5 class="card-title text-maro">Buchet cu Crini</h5>
-            <p class="card-text">Eleganță și rafinament într-un singur buchet.</p>
-            <button class="btn btn-verde add-to-cart" data-product="Buchet cu Crini">Adaugă în Coș</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm hover-shadow">
-          <img src="images/buchet6_frezii.jpg" class="card-img-top product-image" alt="Buchet cu Frezii">
-          <div class="card-body text-center">
-            <h5 class="card-title text-maro">Buchet cu Frezii</h5>
-            <p class="card-text">Parfum și delicatețe pentru momente speciale.</p>
-            <button class="btn btn-verde add-to-cart" data-product="Buchet cu Frezii">Adaugă în Coș</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
+  <!-- Secțiunea Contact -->
   <footer id="contact" class="bg-creme text-center py-3">
     <div class="container">
       <p class="mb-0 text-muted">&copy; 2024 Florescence. Toate drepturile rezervate.</p>
@@ -119,19 +113,10 @@
     </div>
   </footer>
 
+  <!-- Scripturi -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Newsletter subscription
-    document.getElementById('subscribe-btn').addEventListener('click', function() {
-      const email = document.getElementById('newsletter-email').value;
-      if (email) {
-        alert(`Mulțumim că te-ai abonat, ${email}!`);
-      } else {
-        alert('Te rugăm să introduci o adresă de email validă.');
-      }
-    });
-
-    // Add to cart functionality
+    // Funcționalitate pentru adăugarea produselor în coș
     const cart = [];
     document.querySelectorAll('.add-to-cart').forEach(button => {
       button.addEventListener('click', function() {
