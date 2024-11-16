@@ -1,48 +1,48 @@
 body {
     font-family: 'Arial', sans-serif;
-    color: #333333;
+    color: #5D3A3A;
     line-height: 1.6;
-    background-color: #F9F9F9;
+    background-color: #FFF5F7; /* Fundal roz pastelat */
     margin: 0;
     padding: 0;
 }
   
 .bg-creme {
-    background-color: #FFE5B4;
+    background-color: #FFEDEB; /* Crem deschis, aproape alb */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
   
 .text-maro {
-    color: #8B4513;
+    color: #944848; /* Roz-maroniu pastelat */
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
   
 .bg-verde {
-    background-color: #8BC34A;
+    background-color: #FFCAD4; /* Roz pastelat */
     color: #ffffff;
     padding: 3em 0;
-    background: linear-gradient(135deg, #8BC34A, #689F38);
+    background: linear-gradient(135deg, #FFCAD4, #FFC2CE); /* Gradient de roz pastelat */
     border-radius: 10px;
 }
   
 .newsletter .btn-light {
-    color: #8B4513;
-    background-color: #f7f7f7;
+    color: #944848;
+    background-color: #FFF7F8; /* Roz foarte deschis */
     font-weight: bold;
     padding: 0.8em 1.5em;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
   
 .newsletter .btn-light:hover {
-    background-color: #FFE4C4;
+    background-color: #FFD9E1; /* Roz pastelat */
     transform: scale(1.1);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
   
 h2 {
     font-size: 2.8em;
-    color: #8B4513;
+    color: #944848;
     text-align: center;
     margin-bottom: 0.5em;
     font-weight: bold;
@@ -53,7 +53,7 @@ h2 {
 .carousel-image {
     height: 500px;
     object-fit: cover;
-    filter: grayscale(15%);
+    filter: grayscale(10%);
     transition: filter 0.4s ease, transform 0.3s ease;
 }
   
@@ -87,12 +87,12 @@ h2 {
   
 .card-title {
     font-size: 1.5em;
-    color: #8B4513;
+    color: #944848;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
   
 .btn-verde {
-    background-color: #FF8A80;
+    background-color: #FFA3A3; /* Roz intens pastelat */
     color: #ffffff;
     font-weight: bold;
     padding: 0.7em 1.3em;
@@ -102,13 +102,13 @@ h2 {
 }
   
 .btn-verde:hover {
-    background-color: #FF6E6E;
+    background-color: #FF8E8E; /* Roz mai intens */
     transform: scale(1.08);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
   
 .section-produse {
-    background-color: #FFE5B4;
+    background-color: #FFEDEB;
     padding: 60px 0;
     border-radius: 10px;
 }
@@ -116,13 +116,13 @@ h2 {
 .newsletter {
     padding: 60px 0;
     color: white;
-    background: linear-gradient(135deg, #8BC34A, #689F38);
+    background: linear-gradient(135deg, #FFCAD4, #FFC2CE); /* Gradient roz pastelat */
     border-radius: 12px;
 }
   
 footer {
-    background: linear-gradient(135deg, #F9F9F9, #E0E0E0);
-    color: #555555;
+    background: linear-gradient(135deg, #FFF5F7, #FFEDEB); /* Gradient alb-roz */
+    color: #5D3A3A;
     box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.1);
     padding: 2em 0;
     font-size: 1em;
