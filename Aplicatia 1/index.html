@@ -24,6 +24,9 @@
             <a class="nav-link" href="#products">Produse</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#recommendation">Recomandări</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
@@ -67,7 +70,6 @@
   <section id="products" class="container my-5">
     <h2 class="text-center text-maro mb-4">Produsele Noastre</h2>
     <div class="row">
-      <!-- Buchet cu Trandafiri -->
       <div class="col-md-4">
         <div class="card shadow-sm hover-shadow">
           <img src="images/buchet1_cu_trandafiri.jpg" class="card-img-top product-image" alt="Buchet cu Trandafiri">
@@ -78,8 +80,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Buchet cu Lalele -->
       <div class="col-md-4">
         <div class="card shadow-sm hover-shadow">
           <img src="images/buchet2_lalele.jpg" class="card-img-top product-image" alt="Buchet cu Lalele">
@@ -90,8 +90,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Buchet cu Bujori -->
       <div class="col-md-4">
         <div class="card shadow-sm hover-shadow">
           <img src="images/buchet3_bujori.jpg" class="card-img-top product-image" alt="Buchet cu Bujori">
@@ -102,6 +100,19 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Secțiunea Recomandări -->
+  <section id="recommendation" class="bg-verde text-white text-center py-5">
+    <div class="container">
+      <h2>Recomandări Personalizate</h2>
+      <p class="lead">Introduceți ocazia pentru care aveți nevoie de flori și primiți sugestii personalizate!</p>
+      <form id="recommendation-form">
+        <input type="text" id="occasion" class="form-control mb-3" placeholder="Ex: Nuntă, Zi de naștere, Cerere în căsătorie" required>
+        <button type="button" id="get-recommendation" class="btn btn-light">Obține Recomandări</button>
+      </form>
+      <p class="mt-3" id="recommendation-result"></p>
     </div>
   </section>
 
@@ -124,6 +135,20 @@
         cart.push(product);
         alert(`${product} a fost adăugat în coșul tău!`);
       });
+    });
+
+    // Recomandări personalizate
+    document.getElementById('get-recommendation').addEventListener('click', function() {
+      const occasion = document.getElementById('occasion').value.toLowerCase();
+      let recommendation = '';
+      if (occasion.includes('nuntă')) {
+        recommendation = 'Recomandăm buchete cu trandafiri și bujori pentru un eveniment elegant.';
+      } else if (occasion.includes('zi de naștere')) {
+        recommendation = 'Buchete colorate cu gerbera și lalele sunt perfecte pentru aniversări.';
+      } else {
+        recommendation = 'Buchete mixte cu flori de sezon sunt ideale!';
+      }
+      document.getElementById('recommendation-result').innerText = recommendation;
     });
   </script>
 </body>
