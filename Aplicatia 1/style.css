@@ -160,3 +160,118 @@ footer p {
     max-width: 1200px;
     padding: 0 15px;
 }
+
+/* Recomandări Personalizate */
+#recommendation {
+    background: linear-gradient(135deg, #FFC2CE, #FFD6DC); /* Gradient roz deschis */
+    color: #5D3A3A;
+    border-radius: 15px;
+    padding: 50px 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+#recommendation h2 {
+    font-size: 2.5em;
+    color: #944848;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#recommendation .form-control {
+    font-size: 1em;
+    border: 2px solid #FFCAD4;
+    border-radius: 5px;
+    padding: 0.8em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#recommendation .form-control:focus {
+    border-color: #FF8E8E;
+    box-shadow: 0px 0px 8px rgba(255, 142, 142, 0.5);
+}
+
+#recommendation .btn-light {
+    color: #944848;
+    background-color: #FFF5F7;
+    font-weight: bold;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#recommendation .btn-light:hover {
+    background-color: #FFD9E1; /* Roz pastelat */
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+#recommendation #recommendation-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #5D3A3A;
+    background: #FFF7F8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Interactivitate */
+#recommendation #recommendation-result:hover {
+    background: #FFD9E1;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Formulare */
+form input[type="text"] {
+    font-size: 1em;
+    border: 1px solid #FFCAD4;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    border-color: #FF8E8E;
+    box-shadow: 0px 0px 8px rgba(255, 142, 142, 0.5);
+}
+
+form button[type="button"] {
+    font-size: 1em;
+    color: #FFFFFF;
+    background: #FF8E8E;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form button[type="button"]:hover {
+    background: #FF6A6A;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animări subtile */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#recommendation {
+    animation: fadeIn 0.8s ease-in-out;
+}
