@@ -20,21 +20,30 @@
             <a class="nav-link active" href="#">Acasă</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Despre Noi</a>
+            <a class="nav-link" href="#about-us">Despre Noi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Servicii</a>
+            <a class="nav-link" href="#services">Servicii</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Produse</a>
+            <a class="nav-link" href="#products">Produse</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <header class="hero-section text-center text-white py-5">
+    <div class="container">
+      <h1 class="display-4">Bine ați venit la Florescence</h1>
+      <p class="lead">Descoperă frumusețea florilor noastre și creează momente de neuitat!</p>
+      <a href="#products" class="btn btn-verde btn-lg mt-3">Explorează Produsele</a>
+    </div>
+  </header>
+
   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -56,7 +65,8 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <section class="container my-5">
+
+  <section id="products" class="container my-5">
     <h2 class="text-center text-maro mb-4">Produsele Noastre</h2>
     <div class="row">
       <div class="col-md-4">
@@ -65,52 +75,57 @@
           <div class="card-body text-center">
             <h5 class="card-title text-maro">Buchet cu Trandafiri</h5>
             <p class="card-text">Un buchet clasic potrivit pentru orice ocazie.</p>
-            <a href="#" class="btn btn-verde">Vezi detalii</a>
+            <button class="btn btn-verde add-to-cart" data-product="Buchet cu Trandafiri">Adaugă în Coș</button>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm hover-shadow">
-          <img src="images/buchet2_lalele.jpg" class="card-img-top product-image" alt="Buchet cu Lalele">
-          <div class="card-body text-center">
-            <h5 class="card-title text-maro">Buchet cu Lalele</h5>
-            <p class="card-text">Flori elegante pentru gusturi moderne.</p>
-            <a href="#" class="btn btn-verde">Vezi detalii</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm hover-shadow">
-          <img src="images/buchet3_bujori.jpg" class="card-img-top product-image" alt="Buchet cu Bujori">
-          <div class="card-body text-center">
-            <h5 class="card-title text-maro">Buchet cu Bujori</h5>
-            <p class="card-text">Flori rare pentru un efect wow garantat.</p>
-            <a href="#" class="btn btn-verde">Vezi detalii</a>
-          </div>
-        </div>
-      </div>
+      <!-- Alte produse -->
     </div>
   </section>
+
   <section class="newsletter bg-verde text-white text-center py-5">
     <div class="container">
       <h2>Abonează-te la Newsletter</h2>
       <p class="lead">Primește cele mai noi oferte și informații direct în inboxul tău!</p>
       <form class="row justify-content-center">
         <div class="col-md-6">
-          <input type="email" class="form-control mb-3" placeholder="Introdu adresa de email" required>
+          <input type="email" id="newsletter-email" class="form-control mb-3" placeholder="Introdu adresa de email" required>
         </div>
         <div class="col-md-auto">
-          <button type="submit" class="btn btn-light">Abonează-te</button>
+          <button type="button" id="subscribe-btn" class="btn btn-light">Abonează-te</button>
         </div>
       </form>
     </div>
   </section>
-  <footer class="bg-creme text-center py-3">
+
+  <footer id="contact" class="bg-creme text-center py-3">
     <div class="container">
       <p class="mb-0 text-muted">&copy; 2024 Florescence. Toate drepturile rezervate.</p>
+      <p class="mb-0 text-muted">Email: contact@florescence.ro</p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Newsletter subscription
+    document.getElementById('subscribe-btn').addEventListener('click', function() {
+      const email = document.getElementById('newsletter-email').value;
+      if (email) {
+        alert(`Mulțumim că te-ai abonat, ${email}!`);
+      } else {
+        alert('Te rugăm să introduci o adresă de email validă.');
+      }
+    });
+
+    // Add to cart functionality
+    const cart = [];
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', function() {
+        const product = this.getAttribute('data-product');
+        cart.push(product);
+        alert(`${product} a fost adăugat în coșul tău!`);
+      });
+    });
+  </script>
 </body>
 </html>
